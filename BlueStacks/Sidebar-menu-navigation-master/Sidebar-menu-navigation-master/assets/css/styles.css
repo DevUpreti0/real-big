@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+:root {
+  --first-color: #12192C;
+  --second-color: #F5A623;
+  --white-color: #EDEDED;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--white-color);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=====  NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--first-color);
+  padding: 1.25rem .5rem 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+
+.nav__logo-text {
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--first-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--white-color);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav__link:hover {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.nav__text {
+  font-weight: 700;
+}
+
+/*Show menu*/
+.show {
+  width: 168px;
+}
+
+/*Rotate toggle*/
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+/*Active links menu*/
+.active {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+/*Add padding body*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+:root{
+  --primary: #2175f5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #efefef;
+}
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 860px;
+}
+
+.shoeBackground{
+  position: relative;
+  width: 50%;
+  height: 475px;
+  box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+  0 -15px 35px rgba(0, 0, 0, 0.1),
+  0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: .5s;
+}
+
+.gradients{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.gradient{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.first{
+  z-index: 0;
+  animation: 1s width ease;
+}
+
+@keyframes width{
+  from{
+      width: 0%;
+  }
+  to{
+      width: 100%;
+  }
+}
+
+.second{
+  z-index: -1;
+}
+
+.gradient[color="blue"]{
+  background-image: linear-gradient(45deg, #0136af, #22abfa);
+}
+
+.gradient[color="red"]{
+  background-image: linear-gradient(45deg, #d62926, #ee625f);
+}
+
+.gradient[color="green"]{
+  background-image: linear-gradient(45deg, #11998e, #1ce669);
+}
+
+.gradient[color="orange"]{
+  background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
+}
+
+.gradient[color="black"]{
+  background-image: linear-gradient(45deg, #111, #666);
+}
+
+.logo{
+  position: absolute;
+  width: 100px;
+  left: 20px;
+  top: 20px;
+}
+
+.share{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--primary);
+  transition: .5s;
+}
+
+.share:hover{
+  transform: scale(1.1);
+}
+
+.share i{
+  line-height: 50px;
+}
+
+.nike{
+  position: absolute;
+  top: 85px;
+  left: 15px;
+  font-size: 11rem;
+  text-transform: uppercase;
+  line-height: .9;
+  color: #fff;
+  opacity: .1;
+}
+
+.shoe{
+  position: absolute;
+  width: 60%;
+  opacity: 0;
+  bottom: 0;
+  right: 19%;
+  transform: rotate(-0deg);
+  transition: .5s;
+  top: 12%;
+}
+
+.shoe.show{
+  opacity: 1;
+}
+
+.info{
+  width: 50%;
+  background-color: #fff;
+  z-index: 1;
+  padding: 35px 40px;
+  box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1),
+  0 -15px 35px rgba(0, 0, 0, 0.1),
+  0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shoeName{
+  padding: 0 0 10px 0;
+}
+
+.shoeName div{
+  display: flex;
+  align-items: center;
+}
+
+.shoeName div .big{
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #333;
+  line-height: 1;
+}
+
+.shoeName div .new{
+  background-color: var(--primary);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.shoeName .small{
+  font-weight: 500;
+  color: #444;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+
+.shoeName, .description, .color-container, .size-container{
+  border-bottom: 1px solid #dadada;
+}
+
+.description{
+  padding: 10px 0;
+}
+
+.title{
+  color: #3a3a3a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.text{
+  color: #555;
+  font-size: 17px;
+}
+
+.color-container{
+  padding: 10px 0;
+}
+
+.colors{
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.color{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 5px solid;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.color[color="blue"]{
+  background-color: #2175f5;
+  border-color: #2175f5;
+}
+
+.color[color="red"]{
+  background-color: #f84848;
+  border-color: #f84848;
+}
+
+.color[color="green"]{
+  background-color: #29b864;
+  border-color: #29b864;
+}
+
+.color[color="orange"]{
+  background-color: #ff5521;
+  border-color: #ff5521;
+}
+
+.color[color="black"]{
+  background-color: #444;
+  border-color: #444;
+}
+
+.color.active{
+  border-color: #fff;
+  box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.size-container{
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.sizes{
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.size{
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #eee;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.size.active{
+  background-color: var(--primary);
+  color: #fff;
+  transition: .5s;
+}
+
+.buy-price{
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price{
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+}
+
+.price h1{
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.price i{
+  font-size: 1.4rem;
+  margin-right: 1px;
+}
+
+.buy{
+  padding: .7rem 1rem;
+  background-color: var(--primary);
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: .5s;
+}
+
+.buy:hover{
+  transform: scale(1.1);
+}
+
+.buy i{
+  margin-right: 2px;
+}
+
+@media (max-width: 1070px){
+  .shoe{
+      width: 135%;
+  }
+}
+
+@media (max-width: 1000px){
+  .card{
+      flex-direction: column;
+      width: 100%;
+      box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card > div{
+      width: 100%;
+      box-shadow: none;
+  }
+
+  .shoe{
+      width: 100%;
+      transform: rotate(-5deg) translateY(-50%);
+      top: 55%;
+      right: 2%;
+  }
+
+  .nike{
+      top: 20%;
+      left: 5%;
+  }
+}
+
+@media (max-width: 600px){
+  .share{
+      width: 40px;
+      height: 40px;
+  }
+
+  .share i {
+      font-size: 1rem;
+      line-height: 40px;
+  }
+
+  .logo{
+      width: 70px;
+  }
+}
+
+@media (max-width: 490px){
+  .nike{
+      font-size: 7rem;
+  }
+
+  .shoeName div .big{
+      font-size: 1.3rem;
+  }
+
+  .small{
+      font-size: 1rem;
+  }
+
+  .new{
+      padding: 2px 6px;
+      font-size: .9rem;
+  }
+
+  .title{
+      font-size: .9rem;
+  }
+
+  .text{
+      font-size: .8rem;
+  }
+
+  .buy{
+      padding: .5rem .8rem;
+      font-size: .8rem;
+  }
+
+  .price h1{
+      font-size: 1.5rem;
+  }
+
+  .price i{
+      font-size: .9rem;
+  }
+
+  .size{
+      width: 30px;
+      height: 30px;
+      margin: 0 8px;
+      font-size: .9rem;
+      line-height: 30px;
+  }
+
+  .color{
+      margin: 0 6px;
+      width: 0 20px;
+      width: 20px;
+      height: 20px;
+      border-width: 4px;
+  }
+
+  .share{
+      width: 35px;
+      height: 35px;
+      top: 10px;
+      right: 10px;
+  }
+
+  .share i{
+      font-size: .8rem;
+      line-height: 35px;
+  }
+
+  .logo{
+      width: 60px;
+      top: 10px;
+      left: 10px;
+  }
+
+  .info{
+      padding: 20px;
+  }
+}
+
+@media (max-width: 400px){
+  .buy i{
+      display: none;
+  }
+
+  .container{
+      padding: 20px;
+  }
+}
